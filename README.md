@@ -2,14 +2,14 @@ Traveling Salesman: an Ant Colony Optimisation approach
 ==========
  A project for hh.se Algorithms class
 
- # Premise
+ ###Premise
  
  blah, blah
 
-#Language
+###Language
 Java
 
 
 
-### Caveats
+###### Caveats
 This is heavily WIP.
