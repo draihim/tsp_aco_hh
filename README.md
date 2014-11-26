@@ -1,4 +1,15 @@
-tsp_aco_hh
+Traveling Salesman: an Ant Colony Optimisation approach
 ==========
+ A project for hh.se Algorithms class
 
-tsp solved with ACO
+ # Premise
+ 
+ blah, blah
+
+#Language
+Java
+
+
+
+### Caveats
+This is heavily WIP.
