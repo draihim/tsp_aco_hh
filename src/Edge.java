@@ -5,7 +5,7 @@ public class Edge
     private double pheromoneLevel;
     private double cost;
 
-    public Edge(Vertex v1, Vertex v2, int cost) {
+    public Edge(Vertex v1, Vertex v2, double cost) {
         this.v1 = v1;
         this.v2 = v2;
         this.pheromoneLevel = 0.0;
