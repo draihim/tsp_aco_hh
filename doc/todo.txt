@@ -1,6 +1,12 @@
-1. implement a graph class with loading stuff and other things graph - related
+1. implement a graph class with loading stuff and other things graph - related (Noel)
 2. expand a skeleton of acoalg:
-    2.1. make a main loop over iterations and includes all stuff that happens here (evaluation, best specimen, end condition?)
-    2.2. getRandomTour(Graph g) method
-    2.3 fitness function (i guess we're good with just summing the costs)
+    2.1. make a main loop over iterations and includes all stuff that happens here (evaluation, best          	 specimen, end condition?) (Suiming)
+	-Start with a for-loop that iterates over the property of the class. 
+	-Implement a skeleton structure. Keep a list of specimen, avulate them, keep track of the best 	 	 	 specimen.
+	-Fill out the phermon levels, and decrease them.
+    2.2. getRandomTour(Graph g) Method  (Rudin)
+	-Implement a method in the vertix class first thats named selectPath. It will use roulette selection 	 to choose the path.
+	-Look up some sort of algorithm that gets us a tour/path to all thees nodes. Implement this. 
+    2.3 fitness function (i guess we're good with just summing the costs) (Easy, all)
 
+3. Report (Jenny)
