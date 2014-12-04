@@ -1,0 +1,6 @@
+1. implement a graph class with loading stuff and other things graph - related
+2. expand a skeleton of acoalg:
+    2.1. make a main loop over iterations and includes all stuff that happens here (evaluation, best specimen, end condition?)
+    2.2. getRandomTour(Graph g) method
+    2.3 fitness function (i guess we're good with just summing the costs)
+
