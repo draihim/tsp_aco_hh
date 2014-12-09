@@ -21,4 +21,7 @@ public class AcoAlg {
     public void solve() {
         //todo: fill
     }
+    private void evaluate(){
+
+    }
 }
