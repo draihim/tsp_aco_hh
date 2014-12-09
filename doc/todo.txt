@@ -7,6 +7,6 @@
     2.2. getRandomTour(Graph g) Method  (Rudin)
 	-Implement a method in the vertix class first thats named selectPath. It will use roulette selection 	 to choose the path.
 	-Look up some sort of algorithm that gets us a tour/path to all thees nodes. Implement this. 
-    2.3 fitness function (i guess we're good with just summing the costs) (Easy, all)
-
+    2.3 fitness function (i guess we're good with just summing the costs) (Ke liu)
 3. Report (Jenny)
+4. Writing the GUI - Milosz
