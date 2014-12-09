@@ -10,6 +10,11 @@ public class Specimen
         this.fitness = 0.0;
     }
 
+    public Specimen() {
+        this.fitness = 0.0;
+        this.path = null;
+    }
+
     public double getFitness() {
         return fitness;
     }
