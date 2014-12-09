@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class AcoAlg {
     private int antNumber;
     private int iterations;
@@ -19,9 +21,17 @@ public class AcoAlg {
     }
 
     public void solve() {
-        //todo: fill
-    }
-    private void evaluate(){
 
+        //todo: fill
+        for (int i = 0; i < ants.size(); i++) {
+            Specimen spec = ants.get(i);
+            //todo: evaluate the specimen here;
+
+            spec.setFitness(evaluate(spec));
+        }
+    }
+
+    private double evaluate(Specimen ants) {
+        return 0.0;
     }
 }
