@@ -1,3 +1,6 @@
+package src;
+
+
 public class AcoAlg {
     private int antNumber;
     private int iterations;

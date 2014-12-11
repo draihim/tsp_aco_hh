@@ -1,18 +1,30 @@
+package src;
+
+
+import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
-public class Vertex
-{
-    private int x;
-    private int y;
-    ArrayList<Edge> edges;
+public class Vertex {
+	private Point2D.Double p;
+	ArrayList<Edge> edges;
+	boolean visited;
 
-    public Vertex(int x, int y, ArrayList<Edge> edges) {
-        this.x = x;
-        this.y = y;
-        this.edges = new ArrayList<Edge>();
-    }
+	public Vertex(double x, double y){
+		p=new Point2D.Double(x,y);
+		this.edges = new ArrayList<Edge>();
+		this.visited = false; 
+	}
 
-    public ArrayList<Edge> getEdges() {
-        return edges;
-    }
+/*	public Vertex(double x, double y,ArrayList<Edge> edges){
+		p=new Point2D.Double(x,y);
+		this.edges = new ArrayList<Edge>(edges);
+		this.visited = false; 		
+	}*/
+	
+	public Point2D.Double getP() {
+		return p;
+	}
+/*	public ArrayList<Edge> getEdges() {
+		return edges;
+	}*/
 }
