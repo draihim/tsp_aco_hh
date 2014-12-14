@@ -29,7 +29,7 @@ public class Main {
 		for(Vertex n:vertexs){
 			System.out.println("("+n.getP().x+", "+n.getP().y+")");
 			for(Edge edge: n.edges){
-				System.out.println("    ("+edge.getv2().getP().x+", "+edge.getv2().getP().x+")");
+				System.out.println("    ("+edge.getv2().getP().x+", "+edge.getv2().getP().y+")");
 			}
 		}
 	}
