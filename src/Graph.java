@@ -17,34 +17,22 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Graph {
 	private List<Vertex> vertexs;
-//	private List<Edge> edges;
 	private String fileName;
 	private HashMap<Point2D.Double, Vertex> map;
 
 	public Graph(String fileName) {
 		vertexs = new ArrayList<Vertex>();
-//		edges = new ArrayList<Edge>();
 		this.map = new HashMap<Point2D.Double, Vertex>();
 		this.fileName = fileName;
 		createGraphByFile();
 	}
 
-/*	public Graph(List<Vertex> nodes, List<Edge> edges) {
-		this.vertexs = nodes;
-		this.edges = edges;
-	}*/
-
 	public Graph(List<Vertex> nodes, List<Edge> edges) {
 		this.vertexs = nodes;
-//		this.edges = edges;
 	}
 	public List<Vertex> getVertexs() {
 		return vertexs;
 	}
-
-/*	public List<Edge> getEdges() {
-		return edges;
-	}*/
 
 	public void createGraphByFile() {
 		try {
@@ -100,42 +88,25 @@ public class Graph {
 		v1.edges.add(edge1);
 		Edge edge2 = new Edge(v2, v1, cost);
 		v2.edges.add(edge2);
-//		edges.add(edge);
 	}
 	
-/*	public List<Vertex> getNeighbors(Vertex node) {
-		List<Vertex> neighborNodes = new ArrayList<Vertex>();
-		for (Edge edge : edges) {
-			if (edge.getv1().equals(node)) {
-				neighborNodes.add(edge.getv2());
-			}
-			if (edge.getv2().equals(node)) {
-				neighborNodes.add(edge.getv1());
-			}
-		}
-		return neighborNodes;
-	}*/
-	
-	// For the undirected graph get the adjacents whenever its from source or
-	// destination
-/*	public List<Vertex> BFS(Vertex root) {
+	public List<Vertex> BFS(Vertex root) {
 		// TODO Auto-generated method stub
 		List<Vertex> bfsResult = new ArrayList<Vertex>();
-		Set<Vertex> visited = new HashSet<Vertex>();
 		Queue<Vertex> q = new ConcurrentLinkedQueue<Vertex>();
 		q.add(root);
 		while (q.size() > 0) {
 			Vertex n = q.poll();
-			if (!visited.contains(n)) {
-				visited.add(n);
+			if (!n.visited) {
 				bfsResult.add(n);
-				List<Vertex> neighbors = getNeighbors(n);
-				for (int i = 0; i < neighbors.size(); i++) {
-					q.add(neighbors.get(i));
+				n.visited=true;
+				List<Edge> adjEdges = n.edges;
+				for (int i = 0; i < adjEdges.size(); i++) {
+					q.add(adjEdges.get(i).getv2());
 				}
 			}
 		}
 		return bfsResult;
-	}*/
+	}
 	
 }
