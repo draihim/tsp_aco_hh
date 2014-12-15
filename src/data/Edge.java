@@ -1,5 +1,4 @@
-package src;
-
+package data;
 
 public class Edge {
 	private Vertex v1;

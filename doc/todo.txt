@@ -4,7 +4,7 @@
 	-Start with a for-loop that iterates over the property of the class. 
 	-Implement a skeleton structure. Keep a list of specimen, avulate them, keep track of the best 	 	 	 specimen.
 	-Fill out the phermon levels, and decrease them.
-    2.2. getRandomTour(Graph g) Method  (Rudin)
+    2.2. getRandomTour(data.Graph g) Method  (Rudin)
 	-Implement a method in the vertix class first thats named selectPath. It will use roulette selection 	 to choose the path.
 	-Look up some sort of algorithm that gets us a tour/path to all thees nodes. Implement this. 
     2.3 fitness function (i guess we're good with just summing the costs) (Easy, all)

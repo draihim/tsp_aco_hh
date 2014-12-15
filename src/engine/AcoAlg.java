@@ -1,5 +1,4 @@
-package src;
-
+package engine;
 
 public class AcoAlg {
     private int antNumber;

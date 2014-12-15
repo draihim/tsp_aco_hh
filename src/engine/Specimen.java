@@ -1,4 +1,6 @@
-package src;
+package engine;
+
+import data.Vertex;
 
 import java.util.ArrayList;
 

@@ -1,5 +1,4 @@
-package src;
-
+package data;
 
 import java.awt.geom.Point2D;
 import java.io.BufferedReader;
@@ -8,10 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Queue;
-import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 
@@ -85,9 +82,9 @@ public class Graph {
 			v2 = map.get(p2);
 		}
 		Edge edge1 = new Edge(v1, v2, cost);
-		v1.edges.add(edge1);
+		v1.getEdges().add(edge1);
 		Edge edge2 = new Edge(v2, v1, cost);
-		v2.edges.add(edge2);
+		v2.getEdges().add(edge2);
 	}
 	
 	public List<Vertex> BFS(Vertex root) {
@@ -100,7 +97,7 @@ public class Graph {
 			if (!n.visited) {
 				bfsResult.add(n);
 				n.visited=true;
-				List<Edge> adjEdges = n.edges;
+				List<Edge> adjEdges = n.getEdges();
 				for (int i = 0; i < adjEdges.size(); i++) {
 					q.add(adjEdges.get(i).getv2());
 				}
