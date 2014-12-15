@@ -4,7 +4,7 @@ import data.Vertex;
 
 import java.util.ArrayList;
 
-public class Specimen
+public class Specimen implements Comparable
 {
     private double fitness;
     private ArrayList<Vertex> path;
@@ -35,4 +35,13 @@ public class Specimen
         this.path = path;
     }
 
+    public double compareTo(Specimen s) {
+        return this.getFitness() == s.getFitness() ? 0 : this.getFitness() > s.getFitness() ? 1 : -1;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Specimen s = (Specimen) o;
+        return this.getFitness() == s.getFitness() ? 0 : this.getFitness() > s.getFitness() ? 1 : -1;
+    }
 }
