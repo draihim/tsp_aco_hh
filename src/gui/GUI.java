@@ -1,5 +1,7 @@
 package gui;
 
+import data.Graph;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,6 +11,7 @@ import java.awt.event.ActionListener;
  * Created by tyr on 15/12/14.
  */
 public class GUI extends JFrame {
+    private Graph graph;
     private int x = 800, y = 600;
     String[] decayTypes = {"Polynomial", "Linear"};
     JPanel canvas;
@@ -24,7 +27,8 @@ public class GUI extends JFrame {
     private JLabel itLabel;
     private JTextField itInput;
 
-    public GUI() {
+    public GUI(Graph graph) {
+        this.graph = graph;
         this.setSize(x, y);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,7 +47,7 @@ public class GUI extends JFrame {
         settings.setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
 
-        itLabel = new JLabel("iterations: ");
+        itLabel = new JLabel("Iterations: ");
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 0;
         constraints.gridy = 0;
@@ -119,7 +123,7 @@ public class GUI extends JFrame {
         constraints.anchor = GridBagConstraints.PAGE_END;
         settings.add(stop, constraints);
 
-        canvas = new GraphPanel();
+        canvas = new GraphPanel(graph);
         this.add(settings, BorderLayout.WEST);
         this.add(canvas, BorderLayout.EAST);
         this.pack();
