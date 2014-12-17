@@ -11,7 +11,7 @@ public class Main {
     public static final int ANT_SIZE = 10;
 
     public static void main(String[] args) {
-        String fileName = "res/a1.txt";
+        String fileName = "res/d4.txt";
         Graph graph = new Graph(fileName);
         List<Vertex> vertexs = graph.getVertexs();
         for (Vertex n : vertexs) {
@@ -20,6 +20,6 @@ public class Main {
                 System.out.println("    (" + edge.getv2().getP().x + ", " + edge.getv2().getP().y + ")");
             }
         }
-        GUI gui = new GUI();
+        GUI gui = new GUI(graph);
     }
 }
